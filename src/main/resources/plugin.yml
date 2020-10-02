@@ -1,0 +1,11 @@
+name: Zoom-Vault
+version: 1.0
+main: club.frozed.zoom.ZoomVaultImplementation
+description: Zoom-Core Vault Implementation
+website: www.frozed.club
+depend:
+  - Vault
+  - Zoom
+authors:
+  - Ryzeon
+  - Elb1to
