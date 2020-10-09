@@ -1,6 +1,5 @@
 package club.frozed.zoom;
 
-import club.frozed.core.utils.lang.Lang;
 import club.frozed.zoom.vault.ZoomVaultImplementationChat;
 import club.frozed.zoom.vault.ZoomVaultImplementationPermission;
 import lombok.Getter;
@@ -22,17 +21,17 @@ public class ZoomVaultImplementation extends JavaPlugin {
     private ZoomVaultImplementationChat chat;
 
     @Override
-    public void onDisable() {
+    public void onEnable() {
         instance = this;
         permission = new ZoomVaultImplementationPermission();
         permission.register();
         chat = new ZoomVaultImplementationChat(permission);
         chat.register();
-        Bukkit.getConsoleSender().sendMessage(Lang.PREFIX + "§aSuccessfully enabling vault support.");
+        Bukkit.getConsoleSender().sendMessage("§7[§eZoom§7] §aSuccessfully enabling vault support.");
     }
 
     @Override
-    public void onEnable() {
+    public void onDisable() {
         instance = null;
     }
 }

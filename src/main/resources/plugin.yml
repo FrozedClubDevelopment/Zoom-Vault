@@ -5,7 +5,6 @@ description: Zoom-Core Vault Implementation
 website: www.frozed.club
 depend:
   - Vault
-  - Zoom
 authors:
   - Ryzeon
   - Elb1to
